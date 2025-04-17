@@ -1,0 +1,32 @@
+/* Commit: added basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  margin: 10px 0;
+}
+
+/* Commit: styled completed todos */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
