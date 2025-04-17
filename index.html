@@ -17,6 +17,8 @@
 
 <input v-model="newTodo" placeholder="Add a new task...">
 <button @click="addTodo">Add</button>
+<p v-if="todos.length === 0">No tasks yet! Add one above.</p>
+
 
   <!-- Import Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

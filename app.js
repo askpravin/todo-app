@@ -1,10 +1,13 @@
 const { createApp } = Vue;
 
 createApp({
-  data() {
-    return {
-      newTodo: "", // holds the input value
-      todos: [], // array of todo items
-    };
+  methods: {
+    // Add new task if input is not empty
+    addTodo() {
+      if (this.newTodo.trim()) {
+        this.todos.push({ text: this.newTodo, done: false });
+        this.newTodo = ""; // clear input box
+      }
+    },
   },
 }).mount("#app");
