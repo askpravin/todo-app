@@ -7,8 +7,8 @@ createApp({
       newTodo: "", // holds input text
       todos: [
         // initial todos (optional)
-        { text: "Learn Vue Directives", done: false },
-        { text: "Build a Todo App", done: false },
+
+        { text: "Build a Todo App,Bro", done: false },
       ],
     };
   },

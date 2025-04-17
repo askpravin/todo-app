@@ -13,12 +13,18 @@
 <body>
   <div id="app">
     <!-- Vue app will mount here -->
+    <input v-model="newTodo" placeholder="Add a new task...">
+    <button @click="addTodo">Add</button>
+    <p v-if="todos.length === 0">No tasks yet! Add one above.</p>
+    
+    <!-- Add todo list rendering -->
+    <ul>
+      <li v-for="(todo, index) in todos" :key="index" class="todo-item">
+        {{ todo.text }}
+        <button @click="removeTodo(index)">Delete</button>
+      </li>
+    </ul>
   </div>
-
-<input v-model="newTodo" placeholder="Add a new task...">
-<button @click="addTodo">Add</button>
-<p v-if="todos.length === 0">No tasks yet! Add one above.</p>
-
 
   <!-- Import Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -28,3 +34,4 @@
 </body>
 
 </html>
+
